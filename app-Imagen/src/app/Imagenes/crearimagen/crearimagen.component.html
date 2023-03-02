@@ -1,0 +1,24 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+
+        <form [formGroup]="imagenForm" (ngSubmit)="OncrearImagen(imagenForm.value) ">
+            <div>
+                <input type="text" class="fadeIn second" placeholder="Nombre de la imagen" formControlName="nombreI">
+
+            </div>
+            <div>
+                <input type="file" class="fadeIn second" placeholder="Imagen del cloudinary" (change)="onFileSelected($event)" formControlName="
+                imagenP">
+            </div>
+            <div>
+                <input type="text" class="fadeIn second" placeholder="Imagen del google" formControlName="imagen_google">
+            </div>
+            <div>
+                <input type="number" class="cantidad" placeholder="Cantidad" formControlName="cantidad">
+            </div>
+
+            <div>
+                <input type="submit" class="fadeIn fourth" value="crear una Imagen">
+            </div>
+        </form>
